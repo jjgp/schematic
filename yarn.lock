@@ -3808,6 +3808,7 @@ __metadata:
     eslint: "npm:^8.52.0"
     jest: "npm:^29.7.0"
     prettier: "npm:^3.0.3"
+    typescript: "npm:^5.2.2"
   languageName: unknown
   linkType: soft
 
