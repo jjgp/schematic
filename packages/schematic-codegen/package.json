@@ -1,0 +1,6 @@
+{
+    "name": "@schematic/codegen",
+    "dependencies": {
+        "ohm-js": "^17.1.0"
+    }
+}

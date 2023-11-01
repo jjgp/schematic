@@ -1,0 +1,12 @@
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/launch.json
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+node_modules/
+.pnp.*
