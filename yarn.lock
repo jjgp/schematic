@@ -837,6 +837,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ohm-js/cli@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@ohm-js/cli@npm:2.0.0"
+  dependencies:
+    commander: "npm:^8.1.0"
+    fast-glob: "npm:^3.2.7"
+  peerDependencies:
+    ohm-js: ^17.0.0
+  bin:
+    ohm: index.js
+  checksum: fcf764d23919bf9690437fb50e9d2197d071c402264976143ec617cbc94f172bf62de12a710aa23236c77334ca4d6ac1694d351863fcc028d581c905604df69b
+  languageName: node
+  linkType: hard
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -848,6 +862,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@schematic/codegen@workspace:packages/schematic-codegen"
   dependencies:
+    "@ohm-js/cli": "npm:^2.0.0"
     "@types/jest": "npm:^29.5.7"
     jest: "npm:^29.7.0"
     ohm-js: "npm:^17.1.0"
@@ -1584,6 +1599,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^8.1.0":
+  version: 8.3.0
+  resolution: "commander@npm:8.3.0"
+  checksum: 8b043bb8322ea1c39664a1598a95e0495bfe4ca2fad0d84a92d7d1d8d213e2a155b441d2470c8e08de7c4a28cf2bc6e169211c49e1b21d9f7edc6ae4d9356060
+  languageName: node
+  linkType: hard
+
 "concat-map@npm:0.0.1":
   version: 0.0.1
   resolution: "concat-map@npm:0.0.1"
@@ -1960,7 +1982,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.2.7, fast-glob@npm:^3.2.9":
   version: 3.3.1
   resolution: "fast-glob@npm:3.3.1"
   dependencies:

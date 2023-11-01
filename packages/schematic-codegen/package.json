@@ -1,13 +1,16 @@
 {
   "name": "@schematic/codegen",
+  "version": "0.0.1",
   "scripts": {
     "check": "tsc --noEmit",
+    "generate": "ohm generateBundles --withTypes 'src/*.ohm'",
     "test": "jest"
   },
   "dependencies": {
     "ohm-js": "^17.1.0"
   },
   "devDependencies": {
+    "@ohm-js/cli": "^2.0.0",
     "@types/jest": "^29.5.7",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.1",
