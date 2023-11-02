@@ -4,7 +4,7 @@
   "scripts": {
     "check": "tsc --noEmit",
     "generate": "ohm generateBundles --withTypes 'src/*.ohm'",
-    "test": "jest"
+    "test": "yarn generate && jest"
   },
   "dependencies": {
     "ohm-js": "^17.1.0"

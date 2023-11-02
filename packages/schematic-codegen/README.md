@@ -13,3 +13,5 @@ https://github.com/ohmjs/ohm/blob/main/doc/README.md
 https://nextjournal.com/dubroy/ohm-parsing-made-easy
 
 https://inst.eecs.berkeley.edu/~cs164/sp11/python-grammar.html
+
+https://github.com/antlr/grammars-v4/blob/master/graphql/GraphQL.g4
