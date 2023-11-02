@@ -1,13 +1,20 @@
 Schema {
-  Start = Componentdef*
+  Start = Exp*
   
-  Componentdef = component identifier "{" (Member)* "}"
+  Exp = Componentdef | Interfacedef | Typedef
+  
+  Componentdef = component identifier "{" Member* "}"
 
-  /* TODO: interfacedef */
-
+  Interfacedef = interface identifier "{" Member* "}"
+  
+  Typedef = type identifier "{" Member* "}"
+  
+  // TODO: identifier instead of primitive minus reserved words
   Member = identifier ":" primitive
-
-  /* TODO: typedef */
+  
+  Property = identifier ":" primitive
+  
+  /* TODO: functions as types and interface */
 
   identifier = (letter | "_") (alnum | "_")*
 
@@ -29,7 +36,9 @@ Schema {
   boolean = "boolean"
 
   /* TODO: multiline_comment */
+  multiline_comment = "/*" (any)* "*/"
   comment = "//" (~eol any)* eol
   eol = newline | "\r"
   newline = "\n"
+  space += comment
 }
