@@ -1,10 +1,17 @@
 Schema {
+  /* TODO: optional, readonly members, indexing, lists, ... */
+  
   Document = Definition*
   
   Definition = Componentdef | Interfacedef | Typedef
 
-  /* TODO: statics and callables */
-  Interfacedef = interface identifier "{" Member* "}"
+  Interfacedef = interface identifier "{" (StaticMethod | StaticCallable | StaticMember | Method | Member | Callable)* "}"
+  
+  StaticMethod = static Method
+  StaticCallable = static Callable
+  StaticMember = static Member
+  Method = identifier Callable
+  Callable = "(" listOf<NamedValue, ","> ")" "->" (value | void) ";"
   
   Componentdef = component identifier "{" Member* "}"
 
@@ -14,13 +21,11 @@ Schema {
   
   Property = NamedValue ";"
   
-  NamedFunction = "(" listOf<NamedValue, ","> ")" "->" (value | void)
-  
   Function = "(" listOf<value, ","> ")" "->" (value | void)
   
   NamedValue = identifier ":" value 
 
-  /* TODO: listValue, enumValue? */
+  /* TODO: listValue, enumValue, etc.? */
   value = primitive
         | typeValue
         | unknown
@@ -32,6 +37,7 @@ Schema {
   /* TODO: should there be reserved words? */
   reserved = component | interface | type
 
+  static = "static"
   init = "init"
 
   interface = "interface"
