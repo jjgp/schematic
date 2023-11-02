@@ -1,8 +1,14 @@
-import grammar from '../src/schema.ohm-bundle';
+import grammar from "../src/schema.ohm-bundle";
 
-describe("schema", () => {
-  it("should match 42", () => {
-    const matchResult = grammar.match("42");
+// interface Store {
+//   dispatch: (action: any)
+// }
+
+var input = `component Text { verbatim: string }`;
+
+describe("grammar", () => {
+  it("should match text component", () => {
+    const matchResult = grammar.match(input);
     expect(matchResult.succeeded()).toBe(true);
   });
 });

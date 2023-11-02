@@ -1,3 +1,35 @@
 Schema {
-  Exp = "42"
+  Start = Componentdef*
+  
+  Componentdef = component identifier "{" (Member)* "}"
+
+  /* TODO: interfacedef */
+
+  Member = identifier ":" primitive
+
+  /* TODO: typedef */
+
+  identifier = (letter | "_") (alnum | "_")*
+
+  /* TODO: reserved, respect language specific reserved words */
+
+  keyword = any | component | interface | type | void
+
+  void = "void"
+  type = "type"
+  interface = "interface"
+  component = "component"
+
+  /* TODO: function */
+
+  primitive = boolean | number | string
+  
+  string = "string"
+  number = "number"
+  boolean = "boolean"
+
+  /* TODO: multiline_comment */
+  comment = "//" (~eol any)* eol
+  eol = newline | "\r"
+  newline = "\n"
 }
