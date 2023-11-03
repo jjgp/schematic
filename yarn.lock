@@ -864,6 +864,7 @@ __metadata:
   dependencies:
     "@ohm-js/cli": "npm:^2.0.0"
     "@types/jest": "npm:^29.5.7"
+    "@types/node": "npm:^20.8.10"
     jest: "npm:^29.7.0"
     ohm-js: "npm:^17.1.0"
     ts-jest: "npm:^29.1.1"
@@ -994,7 +995,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:^20.8.10":
   version: 20.8.10
   resolution: "@types/node@npm:20.8.10"
   dependencies:
