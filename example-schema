@@ -1,0 +1,74 @@
+// schema
+
+type Layout {}
+
+// core library
+
+interface View {
+    hidden: boolean
+    layout: Layout?
+}
+
+interface Control {
+    id: String
+}
+
+// end core library
+
+component VStack: View {}
+
+component Button: Control {
+    events {
+        TOUCH_DOWN,
+        TOUCH_UP
+    }
+}
+
+component Text: View {
+    verbatim: string
+}
+
+type Person {
+    age: int
+    firstname: string
+    lastname: string?
+    hobbies: [string]?
+}
+
+mutation SetAge 
+
+// template
+
+store MyStore {
+    state: Person
+}
+
+view(person: Person, store: MyStore) {
+    with person {
+        VStack {
+            Text(verbatim: firstname)
+
+            if lastname {
+                Text(verbatim: lastname)
+            }
+
+            for hobby in hobbies {
+                Text(verbatim: hobby)
+            }
+
+            Button(id: "", text: ")
+        }
+    }
+}
+
+controller(store: MyStore) {
+}
+
+effect {}
+
+reducer {}
+
+preview {
+    view(person: Person(age: 36, firstname: "Jason", lastname: "Prasad"))
+}
+
